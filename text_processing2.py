@@ -69,5 +69,6 @@ def to_camel_case(underscore_str):
         return underscore_str
     underscore_str = ''.join([" " if (e =="_") else e for e in underscore_str]).title()
     underscore_str = underscore_str.split()
-    underscore_str[0]=underscore_str[0].lower()
+    if len(underscore_str)>0:
+        underscore_str[0]=underscore_str[0].lower()
     return ''.join(underscore_str)
